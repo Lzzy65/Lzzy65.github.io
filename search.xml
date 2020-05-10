@@ -42,23 +42,37 @@
 </ol>
 <h2 id="四种分类"><a href="#四种分类" class="headerlink" title="四种分类"></a>四种分类</h2><h3 id="1-DDL（Data-Definition-Language）数据定义语言"><a href="#1-DDL（Data-Definition-Language）数据定义语言" class="headerlink" title="1.DDL（Data Definition Language）数据定义语言"></a>1.DDL（Data Definition Language）数据定义语言</h3><p>用来定义数据库对象：数据库、表、列等。关键字：CREATE、DROP、ALTER等。</p>
 <h4 id="对数据库：CRUD"><a href="#对数据库：CRUD" class="headerlink" title="对数据库：CRUD"></a>对数据库：CRUD</h4><h5 id="1-C（Create）：创建"><a href="#1-C（Create）：创建" class="headerlink" title="1.C（Create）：创建"></a>1.C（Create）：创建</h5><ul>
-<li>创建数据库：</li>
-</ul>
+<li><p>创建数据库：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE DATABASE 数据库名称；</span><br></pre></td></tr></table></figure>
 
+
+</li>
+</ul>
 <ul>
 <li><p>创建数据库，判断不存在之后再创建：</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE DATABASE IF NOT EXISTS 数据库名称；</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>创建数据库，并制定字符集：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE DATABASE IF NOT EXISTS 数据库名称 CHARACTER SET GBK;</span><br></pre></td></tr></table></figure>
+
+
 
 </li>
 </ul>
 <h5 id="2-R（Retrieve）：查询"><a href="#2-R（Retrieve）：查询" class="headerlink" title="2.R（Retrieve）：查询"></a>2.R（Retrieve）：查询</h5><ul>
 <li><p>查询所有数据库的名称：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SHOW DATABASES;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>查询某个数据库的字符集（创建语句）：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SHOW CREATE DATABASE 数据库名称；</span><br></pre></td></tr></table></figure>
 
@@ -77,18 +91,32 @@
 <h5 id="4-D（Delete）：删除"><a href="#4-D（Delete）：删除" class="headerlink" title="4.D（Delete）：删除"></a>4.D（Delete）：删除</h5><ul>
 <li><p>删除数据库</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP DATABASE 数据库名称；</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>判断数据库是否存在，存在则删除</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP DATABASE IF EXISTS 数据库名称；</span><br></pre></td></tr></table></figure>
+
+
 
 </li>
 </ul>
 <h5 id="5-使用数据库："><a href="#5-使用数据库：" class="headerlink" title="5.使用数据库："></a>5.使用数据库：</h5><ul>
 <li><p>查询当前正在使用的数据库名称</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT DATABASE();</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>使用数据库</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">USE 数据库名称；</span><br></pre></td></tr></table></figure>
+
+
 
 
 
@@ -98,22 +126,20 @@
 <li><p>创建表：</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE TABLE 表名称（</span><br><span class="line">	列名1 数据类型1，</span><br><span class="line">	列名2 数据类型2，</span><br><span class="line">	....</span><br><span class="line">	列名n 数据类型n</span><br><span class="line">）；-- 注意：最有一列，不需要加逗号</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>数据类型：</li>
-</ul>
-<ol>
-<li>INT ：整数类型</li>
-<li>DOUBLE：小数类型，source double（4,1），表示共四位，小数点后取一位</li>
-<li>DATE：日期，只包含年月日，yyyy-MM-dd HH:mm:ss</li>
-<li>DATATIME：日期，包含年月日时分秒，yyyy-MM-dd HH:mm:ss</li>
-<li>TIMESTAMP：时间戳类型，包含年月日，不赋值或NULL则使用系统时间</li>
-<li>VARCHAR：字符串，name varchar（20）：姓名最大20个字符。</li>
-</ol>
+
+
 </li>
 </ul>
-<ul>
+<pre><code>- 数据类型：
+
+1. INT ：整数类型
+2. DOUBLE：小数类型，source double（4,1），表示共四位，小数点后取一位
+3. DATE：日期，只包含年月日，yyyy-MM-dd HH:mm:ss
+4. DATATIME：日期，包含年月日时分秒，yyyy-MM-dd HH:mm:ss
+5. TIMESTAMP：时间戳类型，包含年月日，不赋值或NULL则使用系统时间
+6. VARCHAR：字符串，name varchar（20）：姓名最大20个字符。</code></pre><ul>
 <li><p>复制现有数据库中的表：</p>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CREATE TABLE 表名 LIKE 表名；</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   CREATE TABLE 表名称（</span><br><span class="line">   	列名1 数据类型1，</span><br><span class="line">列名2 数据类型2，</span><br><span class="line">   	....</span><br><span class="line">   	列名n 数据类型n</span><br><span class="line">   ）；-- 注意：最有一列，不需要加逗号</span><br></pre></td></tr></table></figure>
 
 
 
@@ -122,7 +148,12 @@
 <h5 id="2-R（Retrieve）：查询-1"><a href="#2-R（Retrieve）：查询-1" class="headerlink" title="2.R（Retrieve）：查询"></a>2.R（Retrieve）：查询</h5><ul>
 <li><p>查询某个数据库中的所有表名称：</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SHOW TABLES;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>查询表结构：</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DESC 表名；</span><br></pre></td></tr></table></figure>
 
@@ -133,16 +164,36 @@
 <h5 id="3-U（Update）：修改-1"><a href="#3-U（Update）：修改-1" class="headerlink" title="3.U（Update）：修改"></a>3.U（Update）：修改</h5><ul>
 <li><p>修改表名：</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ALTER TABLE 表名 RENAME TO 新表名；</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>修改表的字符集：</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ALTER DATABASE 表名 CHARACTER SET UTF8；</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>添加一列：</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ALTER TABLE 表名 ADD 列名 数据类型；</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>修改列名称 类型：</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ALTER TABLE 表名 CHANGE 列名 新列名 新数据类;型；</span><br><span class="line">ALTER TABLE 表名 MODIFY 列名 新数据类型；</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>删除列：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ALTER TABLE 表名 DROP 列名；</span><br></pre></td></tr></table></figure>
 
@@ -153,14 +204,23 @@
 <h5 id="4-D（Delete）：删除-1"><a href="#4-D（Delete）：删除-1" class="headerlink" title="4.D（Delete）：删除"></a>4.D（Delete）：删除</h5><ul>
 <li><p>删除表</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP TABLE 表名；</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>判断数据库是否存在，存在则删除</p>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DROP TABLE IF EXISTS 数据库名称；</span><br></pre></td></tr></table></figure>
+
+
 
 </li>
 </ul>
 <h3 id="2-DML（Data-Manipulation-Language）"><a href="#2-DML（Data-Manipulation-Language）" class="headerlink" title="2.DML（Data Manipulation Language）"></a>2.DML（Data Manipulation Language）</h3><p>对数据库中的表的数据进行增删改。关键字：INSERT、DELETE、UPDATE等。</p>
 <h5 id="1-添加数据："><a href="#1-添加数据：" class="headerlink" title="1.添加数据："></a>1.添加数据：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">INESRT INTO 表名(列名1,列名2,...列名n) VALUE(值1,值2,...值n)；</span><br></pre></td></tr></table></figure>
+
+
 
 <ul>
 <li>注意：<ul>
@@ -172,21 +232,27 @@
 </ul>
 <h5 id="2-删除数据："><a href="#2-删除数据：" class="headerlink" title="2.删除数据："></a>2.删除数据：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DELETE FROM 表名 WHERE 条件；</span><br></pre></td></tr></table></figure>
 
+
+
 <ul>
 <li><p>注意：</p>
 <ul>
 <li><p>如果不加条件，默认删除表中所有记录。</p>
 </li>
 <li><p>如果要删除所有记录。有两种方式：</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DELETE FEOM 表名;-- 不推荐，有多少记录则删除多少次，效率低</span><br><span class="line">TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后再创建一张一样的空表</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-修改数据："><a href="#3-修改数据：" class="headerlink" title="3.修改数据："></a>3.修改数据：</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPDATE 表名 SET 列名1 &#x3D; 值1, 列名2&#x3D;值2,... WHERE 条件；</span><br></pre></td></tr></table></figure>
+
+
+
 <ul>
-<li><pre><code class="mysql">DELETE FEOM 表名;-- 不推荐，有多少记录则删除多少次，效率低
-TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后再创建一张一样的空表
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">##### 3.修改数据：</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;mysql</span><br><span class="line">UPDATE 表名 SET 列名1 &#x3D; 值1, 列名2&#x3D;值2,... WHERE 条件；</span><br></pre></td></tr></table></figure></code></pre>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 <li><p>注意：</p>
 <ul>
 <li>如果不加任何条件，则会将表中的所有记录全部修改。</li>
@@ -211,15 +277,30 @@ TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后�
 <h5 id="2-基础查询："><a href="#2-基础查询：" class="headerlink" title="2.基础查询："></a>2.基础查询：</h5><ol>
 <li><p>多个字段的查询</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT 列名1,列名2 FROM 表名；</span><br><span class="line">SELECT * FEOM 表名；-- 查询所有表名</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="2">
 <li><p>去除重复</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT DISTINCT 列名 FROM 表名;</span><br><span class="line">SELECT DISTINCT 列名1,列名2 FROM 表名; -- 两列数据完全一致才可以去重</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="3">
 <li><p>计算列</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    SELECT 列名1,列名2,列名3,列名2 + 列名3 FROM 表名;</span><br><span class="line">    -- 如果一列有null值，可以使用IFNULL()判断</span><br><span class="line">SELECT 列名1,列名2,列名3,列名2 + IFNULL(列名3,0) FROM 表名;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT 列名1,列名2,列名3,列名2 + 列名3 FROM 表名;</span><br><span class="line">-- 如果一列有null值，可以使用IFNULL()判断</span><br><span class="line">SELECT 列名1,列名2,列名3,列名2 + IFNULL(列名3,0) FROM 表名;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="4">
 <li><p>起别名</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 可以使用AS对列起别名</span><br><span class="line">   SELECT 列名1,列名2,列名3,列名2 + IFNULL(列名3,0) AS 列表3&#96; FROM 表名;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 可以使用AS对列起别名</span><br><span class="line">SELECT 列名1,列名2,列名3,列名2 + IFNULL(列名3,0) AS 列表3&#96; FROM 表名;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -261,7 +342,12 @@ TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后�
 <h5 id="4-排序查询"><a href="#4-排序查询" class="headerlink" title="4.排序查询:"></a>4.排序查询:</h5><ol>
 <li><p>语法：</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT * FROM 表名 ORDER BY 列名 ASC;-- 升序</span><br><span class="line">SELECT * FROM 表名 ORDER BY 列名 DESC;-- 降序</span><br><span class="line">-- 多条件排序</span><br><span class="line">SELECT * FROM 表名 ORDER BY 列名1 ASC, 列名2 DESC;-- 满足第一列条件后按照第二列条件排序</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="2">
 <li><p>排序方式：</p>
 <p> ASC-升序；DESC-降序</p>
 </li>
@@ -273,16 +359,36 @@ TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后�
 <ol>
 <li><p>COUNT：计数</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT COUNT(列名) FROM 表名;</span><br><span class="line">SELECT COUNT(IFNULL(列名,0) FROM 表名;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="2">
 <li><p>MAX：最大值</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT MAX(列名) FROM 表名;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="3">
 <li><p>MIN：最小值</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT MIN(列名) FROM 表名;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="4">
 <li><p>SUM：求和</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT SUM(列名) FROM 表名;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="5">
 <li><p>AVG：平均值</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT AVG(列名) FROM 表名;</span><br></pre></td></tr></table></figure>
 
@@ -293,7 +399,12 @@ TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后�
 <h5 id="6-分组查询"><a href="#6-分组查询" class="headerlink" title="6.分组查询:"></a>6.分组查询:</h5><ol>
 <li><p>语法：GROUP BY</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT 分组字段,聚合函数 FROM 表名 GROUP BY 分组字段;</span><br><span class="line">-- 举例，按性别分组，展示数学平均分和人数</span><br><span class="line">SELECT sex, AVG(math), COUNT(id) FROM student GROUP BY sex;</span><br><span class="line">-- 举例，按性别分组，展示数学平均分和人数 要求：分数不低于70分</span><br><span class="line">SELECT sex, AVG(math), COUNT(id) FROM student WHERE math &gt; 70 GROUP BY sex;</span><br><span class="line">-- 举例，按性别分组，展示数学平均分和人数 要求：分数不低于70分，且分组之后人数要大于2人</span><br><span class="line">SELECT sex, AVG(math), COUNT(id) FROM student WHERE math &gt; 70 GROUP BY sex HAVING COUNT(id) &gt; 2;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ol>
+<ol start="2">
 <li><p>注意：</p>
 <ol>
 <li>分组之后查询的字段：分组字段、聚合函数</li>
@@ -310,6 +421,8 @@ TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后�
 <li>公式：开始的索引 = (当前的页码 - 1) * 每页显示的条数</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 每页显示3条记录</span><br><span class="line">SELECT * FROM 表名 LIMIT 0,3; -- 第一页</span><br><span class="line">SELECT * FROM 表名 LIMIT 0,3; -- 第二页</span><br><span class="line">SELECT * FROM 表名 LIMIT 0,3; -- 第三页</span><br></pre></td></tr></table></figure>
+
+
 
 <ol start="3">
 <li>LIMIT是MySQL特有的语法方式。</li>
@@ -331,7 +444,7 @@ TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后�
 </ul>
 <pre><code>2. 非空约束：not null
 
-    <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 创建表示添加非空约束</span><br><span class="line">CREATE TABLE 表名(</span><br><span class="line">	id INT,</span><br><span class="line">    NAME VARCHAR(20) NOT NULL</span><br><span class="line">);</span><br><span class="line">-- 创建表后，添加非空约束</span><br><span class="line">ALTER TABLE 表名 MODIFY NAME VARCHAR(20) NOT NULL;</span><br><span class="line">-- 删除非空约束</span><br><span class="line">ALTER TABLE 表名 MODIFY NAME VARCHAR(20);</span><br></pre></td></tr></table></figure>
+   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 创建表示添加非空约束</span><br><span class="line">CREATE TABLE 表名(</span><br><span class="line">	id INT,</span><br><span class="line">    NAME VARCHAR(20) NOT NULL</span><br><span class="line">);</span><br><span class="line">-- 创建表后，添加非空约束</span><br><span class="line">ALTER TABLE 表名 MODIFY NAME VARCHAR(20) NOT NULL;</span><br><span class="line">-- 删除非空约束</span><br><span class="line">ALTER TABLE 表名 MODIFY NAME VARCHAR(20);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -345,9 +458,13 @@ TEUNCATE TABLE 表名;-- 推荐使用，效率高，先删除整个表，人后�
 
     <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 创建表示添加外键约束(外键对应主表应先创建，否则会报错)</span><br><span class="line">CREATE TABLE 表名(</span><br><span class="line">	id INT,</span><br><span class="line">    NAME VARCHAR(20) NOT NULL</span><br><span class="line">    外键列, -- 外键对应主表的主键</span><br><span class="line">    CONSTRAINT 外键名称 FOREIGN KEY (外键列名称) REFERENCES 主表名称(主表列名)</span><br><span class="line">);</span><br><span class="line">-- 删除外键</span><br><span class="line">ALTER TABLE 表名 DROP FOREIGN KEY 外键名称;</span><br><span class="line">-- 创建表之后，添加外键</span><br><span class="line">ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN (外键列名称) REFERENCES 主表名称(主表列名称)</span><br></pre></td></tr></table></figure>
 
+
+
     * 级联操作
 
-        <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 添加外键时，设置级联更新，级联删除（可以同时写，也可以分开写）</span><br><span class="line">ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN (外键列名称) REFERENCES 主表名称(主表列名称) ON UPDATE CASCADE ON DELETE CASCADE;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    -- 添加外键时，设置级联更新，级联删除（可以同时写，也可以分开写）</span><br><span class="line">ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN (外键列名称) REFERENCES 主表名称(主表列名称) ON UPDATE CASCADE ON DELETE CASCADE;</span><br></pre></td></tr></table></figure>
+
+
 
         分类：
 
