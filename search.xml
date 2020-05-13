@@ -25,6 +25,7 @@
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>个人博客，分享学习经验、趣闻。</p>
 <a id="more"></a>
 <img src="/2020/04/14/%E8%AF%B4%E6%98%8E/%E5%A4%B4%E5%83%8F.jpg" class="">
+
 <h2 id="大体计划"><a href="#大体计划" class="headerlink" title="大体计划"></a>大体计划</h2><p>每月至少写一篇学习笔记，或者其他相关文章。督促自己。</p>
 ]]></content>
   </entry>
@@ -433,32 +434,32 @@
 <li><p>$.ajax()</p>
 <ul>
 <li><p>语法：$.ajax({键值对})；</p>
-  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">   	url:<span class="string">"ajaxServlet"</span>, <span class="comment">//请求路径</span></span><br><span class="line">    type:<span class="string">"POST"</span>, <span class="comment">//请求方式，不写默认为GET</span></span><br><span class="line">    data:&#123;<span class="string">"username"</span>:<span class="string">"jack"</span>,<span class="string">"age"</span>:<span class="number">23</span>&#125;, <span class="comment">//请求参数（这里是json格式）</span></span><br><span class="line">    <span class="comment">//data:"username=jack&amp;age=23"  </span></span><br><span class="line">    success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        alter(data);</span><br><span class="line">    &#125;, <span class="comment">//响应成功后的回调函数</span></span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alter(<span class="string">"出错了。。。"</span>)；</span><br><span class="line">    &#125;, <span class="comment">//响应出现错误时的回调函数</span></span><br><span class="line">    dataType:<span class="string">"text"</span> <span class="comment">//设置接收到的响应数据的格式</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
+  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">   	url:<span class="string">"ajaxServlet"</span>, <span class="comment">//请求路径</span></span><br><span class="line">    type:<span class="string">"POST"</span>, <span class="comment">//请求方式，不写默认为GET</span></span><br><span class="line">    data:&#123;<span class="string">"username"</span>:<span class="string">"jack"</span>,<span class="string">"age"</span>:<span class="number">23</span>&#125;, <span class="comment">//请求参数（这里是json格式）</span></span><br><span class="line">    <span class="comment">//data:"username=jack&amp;age=23"  </span></span><br><span class="line">    success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        alter(data);</span><br><span class="line">    &#125;, <span class="comment">//响应成功后的回调函数</span></span><br><span class="line">    error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alter(<span class="string">"出错了。。。"</span>)；</span><br><span class="line">    &#125;, <span class="comment">//响应出现错误时的回调函数</span></span><br><span class="line">    dataType:<span class="string">"text"</span> <span class="comment">//设置接收到的响应数据的格式</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>$.get()：发送GET请求</p>
+<ul>
+<li>语法：$.get(url, [data], [callback], [type])</li>
+<li>参数：url：<ul>
+<li>请求路径</li>
+<li>data：请求参数</li>
+<li>callback：回调函数</li>
+<li>type：响应结果的类型</li>
+</ul>
 </li>
 </ul>
 </li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<pre><code>    2. $.get()：发送GET请求
-- 语法：$.get(url, [data], [callback], [type])
-        - 参数：url：
-            - 请求路径
-            - data：请求参数
-            - callback：回调函数
-            - type：响应结果的类型</code></pre><ol start="3">
 <li><p>$.post()：发送POST请求</p>
- <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.post(</span><br><span class="line">    <span class="string">"ajaxServlet"</span>,&#123;<span class="attr">username</span>:<span class="string">"rose"</span>&#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        alter(date)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"text"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.post(</span><br><span class="line">    <span class="string">"ajaxServlet"</span>,&#123;<span class="attr">username</span>:<span class="string">"rose"</span>&#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        alter(date)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"text"</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 
 
 
 
+</li>
+</ol>
+</li>
+</ol>
 </li>
 </ol>
 <h1 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h1><ol>
@@ -497,38 +498,29 @@
 </li>
 <li><p>中括号保存数组：[]</p>
   <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1.定义基本格式</span></span><br><span class="line"><span class="keyword">var</span> person = &#123;<span class="string">"name"</span>:<span class="string">"Tom"</span>,<span class="string">"age"</span>:<span class="number">23</span>, <span class="string">"gender"</span>:<span class="literal">true</span>&#125;;</span><br><span class="line"><span class="comment">//2.嵌套格式 &#123;&#125;→[]</span></span><br><span class="line"><span class="keyword">var</span> persons = &#123;</span><br><span class="line">    <span class="string">"persons"</span>:[</span><br><span class="line">        &#123;<span class="string">"name"</span>:<span class="string">"Tom"</span>,<span class="string">"age"</span>:<span class="number">23</span>, <span class="string">"gender"</span>:<span class="literal">true</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"name"</span>:<span class="string">"Tom"</span>,<span class="string">"age"</span>:<span class="number">24</span>, <span class="string">"gender"</span>:<span class="literal">true</span>&#125;,</span><br><span class="line">		&#123;<span class="string">"name"</span>:<span class="string">"Tom"</span>,<span class="string">"age"</span>:<span class="number">25</span>, <span class="string">"gender"</span>:<span class="literal">true</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//嵌套格式 []→&#123;&#125;</span></span><br><span class="line"><span class="keyword">var</span> ps = [</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Tom"</span>,<span class="string">"age"</span>:<span class="number">23</span>, <span class="string">"gender"</span>:<span class="literal">true</span>&#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Tom"</span>,<span class="string">"age"</span>:<span class="number">24</span>, <span class="string">"gender"</span>:<span class="literal">true</span>&#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Tom"</span>,<span class="string">"age"</span>:<span class="number">25</span>, <span class="string">"gender"</span>:<span class="literal">true</span>&#125;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
 </ul>
 </li>
+<li><p>获取数据</p>
+<ol>
+<li><p>Json对象.键名    </p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">    <span class="keyword">var</span> name = person.name;</span><br><span class="line">    <span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2. Json对象["键名"]  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    `</span><span class="string">``</span>javascript</span><br><span class="line">    <span class="keyword">var</span> name = person[<span class="string">"name"</span>];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组对象[索引]    </p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var name &#x3D; persons.persons[2].name; &#x2F;&#x2F;嵌套格式 &#123;&#125;→[]</span><br><span class="line">var name &#x3D; ps[1].name; &#x2F;&#x2F;嵌套格式 []→&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>遍历</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取person对象中的所有键和值</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> person)&#123;</span><br><span class="line">    alter(key)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取ps中的所有值</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;ps.length; i++)&#123;</span><br><span class="line">    <span class="keyword">var</span> p = ps[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> p)&#123;</span><br><span class="line">        alert(key + <span class="string">":"</span> + p[key]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
 </ol>
 </li>
 </ol>
-<pre><code>2. 获取数据
-
-    1. Json对象.键名    
-
-        <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name = person.name;</span><br></pre></td></tr></table></figure>
-
-
-
-    2. Json对象[&quot;键名&quot;]  
-
-        <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name = person[<span class="string">"name"</span>];</span><br></pre></td></tr></table></figure>
-
-
-
-    3. 数组对象[索引]    
-
-        <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var name &#x3D; persons.persons[2].name; &#x2F;&#x2F;嵌套格式 &#123;&#125;→[]</span><br><span class="line">var name &#x3D; ps[1].name; &#x2F;&#x2F;嵌套格式 []→&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-    4. 遍历
-
-        <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取person对象中的所有键和值</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> person)&#123;</span><br><span class="line">    alter(key)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取ps中的所有值</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;ps.length; i++)&#123;</span><br><span class="line">    <span class="keyword">var</span> p = ps[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> p)&#123;</span><br><span class="line">        alert(key + <span class="string">":"</span> + p[key]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><ol start="3">
+</li>
+</ol>
+<ol start="3">
 <li><p>Json数据和Java对象的相互转换</p>
 <ul>
 <li>Json解析器：<ul>
@@ -550,42 +542,50 @@
 </li>
 </ol>
 </li>
+<li><p>Java对象转换为Json</p>
+<ol>
+<li><p>使用步骤：</p>
+<ol>
+<li><p>导入Jackson相关jar包</p>
+</li>
+<li><p>创建Jsckson核心对象 OBjectMapper</p>
+</li>
+<li><p>调用 ObjectMapper的相关方法进行转换</p>
+<ol>
+<li><p>转换方法：</p>
+<ul>
+<li><p>writeValue(参数1，obj):</p>
+<p>  参数1：</p>
+<p>  ​            File：将obj对象转换为Json字符串，并保存到指定的文件中</p>
+<p>  ​            Writer：将obj对象转换为Json字符串，并将Json数据填充到字符输出流中</p>
+<p>  ​            OutputStream：将obj对象转换为Json字符串，并将Json数据填充到字节流输出                                         流中</p>
+</li>
+<li><p>writeValueAsString(obj)：将对象转为Json字符串</p>
+</li>
+</ul>
+</li>
+<li><p>注解：</p>
+<ol>
+<li>@JsonIgnore：排除（忽略）属性。</li>
+<li>@JsonFormat：属性值的格式化。</li>
+</ol>
+</li>
+<li><p>复杂Java对象的转换</p>
+<ol>
+<li>List</li>
+<li>Map</li>
 </ol>
 </li>
 </ol>
-<pre><code>2. Java对象转换为Json
-
-    1. 使用步骤：
-
-        1. 导入Jackson相关jar包
-
-        2. 创建Jsckson核心对象 OBjectMapper
-
-        3. 调用 ObjectMapper的相关方法进行转换
-
-            1. 转换方法：
-
-                - writeValue(参数1，obj):
-
-                    参数1：
-
-                    ​            File：将obj对象转换为Json字符串，并保存到指定的文件中
-
-                    ​            Writer：将obj对象转换为Json字符串，并将Json数据填充到字符输出流中
-
-                    ​            OutputStream：将obj对象转换为Json字符串，并将Json数据填充到字节流输出                                         流中
-
-                - writeValueAsString(obj)：将对象转为Json字符串
-
-            2. 注解：
-
-                1. @JsonIgnore：排除（忽略）属性。
-                2. @JsonFormat：属性值的格式化。
-
-            3. 复杂Java对象的转换
-
-                1. List
-                2. Map</code></pre>]]></content>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
       <tags>
         <tag>web</tag>
       </tags>
@@ -595,6 +595,10 @@
     <url>/2020/05/10/JDBC%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/</url>
     <content><![CDATA[<h1 id="JDBC（Java-DataBase-Connectivity）"><a href="#JDBC（Java-DataBase-Connectivity）" class="headerlink" title="JDBC（Java DataBase Connectivity）"></a>JDBC（Java DataBase Connectivity）</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Java数据库连接，定义了Java语言操作所有关系型数据库的规则，即接口。</p>
 <a id="more"></a>
+
+
+
+<img src="/2020/05/10/JDBC%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/%E7%A8%8B%E5%BA%8F%E5%91%98.png" class="">
 
 <h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		<span class="comment">//1. 导入驱动jar包</span></span><br><span class="line">		<span class="comment">//2. 注册驱动</span></span><br><span class="line">        Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">		<span class="comment">//3. 获取数据库连接对象Connec</span></span><br><span class="line">        Connection conn = DriverManager.getConnection(</span><br><span class="line">                <span class="string">"jdbc:mysql://localhost:3306/test"</span>, <span class="string">"root"</span>, <span class="string">"root"</span>);</span><br><span class="line">		<span class="comment">//4. 定义SQL</span></span><br><span class="line">        String sql = <span class="string">"update login set password = 110 where id =1"</span>;</span><br><span class="line">		<span class="comment">//5. 获取执行SQL语句的对象Statement</span></span><br><span class="line">        Statement stmt = conn.createStatement();</span><br><span class="line">		<span class="comment">//6. 执行SQL，接收返回结果</span></span><br><span class="line">        <span class="keyword">int</span> count = stmt.executeUpdate(sql);</span><br><span class="line">		<span class="comment">//7. 处理结果</span></span><br><span class="line">        System.out.println(count);</span><br><span class="line">		<span class="comment">// 8. 释放资源</span></span><br><span class="line">        stmt.close();</span><br><span class="line">        conn.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -687,7 +691,15 @@
 <li><p>实例：</p>
 <ol>
 <li><p>简单使用</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo6</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">            <span class="comment">//为stmt和conn创建全局变量,使得在finally&#123;&#125;中可以正常释放资源</span></span><br><span class="line">            Statement stmt = <span class="keyword">null</span>;</span><br><span class="line">            Connection conn = <span class="keyword">null</span>;</span><br><span class="line">            ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">//1.注册驱动</span></span><br><span class="line">                Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">                <span class="comment">//2.定义sql,将login表中id=3记录删除</span></span><br><span class="line">                String sql = <span class="string">"select * from login"</span>;</span><br><span class="line">                <span class="comment">//3.获取Connection对象</span></span><br><span class="line">                conn = DriverManager.getConnection(</span><br><span class="line">                        <span class="string">"jdbc:mysql:///test"</span>, <span class="string">"root"</span>, <span class="string">"root"</span></span><br><span class="line">                );</span><br><span class="line">                <span class="comment">//4.获取执行SQL的对象 Statement</span></span><br><span class="line">                stmt = conn.createStatement();</span><br><span class="line">                <span class="comment">//5.执行sql，返回影响的行数</span></span><br><span class="line">                rs = stmt.executeQuery(sql);</span><br><span class="line">                <span class="comment">//6.处理结果</span></span><br><span class="line">                <span class="comment">//6.1让游标向下移动一行</span></span><br><span class="line">                rs.next();</span><br><span class="line">                <span class="comment">//6.2获取数据</span></span><br><span class="line">                <span class="keyword">int</span> id = rs.getInt(<span class="number">1</span>);</span><br><span class="line">                String username = rs.getString(<span class="string">"username"</span>);</span><br><span class="line">                String password = rs.getString(<span class="string">"password"</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="comment">//打印结果：1---zhangsan---110</span></span><br><span class="line">                System.out.println(id + <span class="string">"---"</span> + username + <span class="string">"---"</span> + password);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                <span class="comment">//7.释放资源</span></span><br><span class="line">                <span class="comment">//碧莲空指针异常</span></span><br><span class="line">                <span class="keyword">if</span> (stmt != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        rs.close();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        stmt.close();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (conn != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        conn.close();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo6</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">            <span class="comment">//为stmt和conn创建全局变量,使得在finally&#123;&#125;中可以正常释放资源</span></span><br><span class="line">            Statement stmt = <span class="keyword">null</span>;</span><br><span class="line">            Connection conn = <span class="keyword">null</span>;</span><br><span class="line">            ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">//1.注册驱动</span></span><br><span class="line">                Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">                <span class="comment">//2.定义sql,将login表中id=3记录删除</span></span><br><span class="line">                String sql = <span class="string">"select * from login"</span>;</span><br><span class="line">                <span class="comment">//3.获取Connection对象</span></span><br><span class="line">                conn = DriverManager.getConnection(</span><br><span class="line">                        <span class="string">"jdbc:mysql:///test"</span>, <span class="string">"root"</span>, <span class="string">"root"</span></span><br><span class="line">                );</span><br><span class="line">                <span class="comment">//4.获取执行SQL的对象 Statement</span></span><br><span class="line">                stmt = conn.createStatement();</span><br><span class="line">                <span class="comment">//5.执行sql，返回影响的行数</span></span><br><span class="line">                rs = stmt.executeQuery(sql);</span><br><span class="line">                <span class="comment">//6.处理结果</span></span><br><span class="line">                <span class="comment">//6.1让游标向下移动一行</span></span><br><span class="line">                rs.next();</span><br><span class="line">                <span class="comment">//6.2获取数据</span></span><br><span class="line">                <span class="keyword">int</span> id = rs.getInt(<span class="number">1</span>);</span><br><span class="line">                String username = rs.getString(<span class="string">"username"</span>);</span><br><span class="line">                String password = rs.getString(<span class="string">"password"</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="comment">//打印结果：1---zhangsan---110</span></span><br><span class="line">                System.out.println(id + <span class="string">"---"</span> + username + <span class="string">"---"</span> + password);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                <span class="comment">//7.释放资源</span></span><br><span class="line">                <span class="comment">//避免空指针异常</span></span><br><span class="line">                <span class="keyword">if</span> (stmt != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        rs.close();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        stmt.close();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (conn != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        conn.close();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>遍历（游标向下一行—&gt;判断是否有数据—&gt;获取数据）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//6.处理结果</span></span><br><span class="line"><span class="comment">//循环判断游标是否是最后一行末尾</span></span><br><span class="line"><span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">    <span class="comment">//6.1获取数据</span></span><br><span class="line">    <span class="keyword">int</span> id = rs.getInt(<span class="number">1</span>);</span><br><span class="line">    String username = rs.getString(<span class="string">"username"</span>);</span><br><span class="line">    String password = rs.getString(<span class="string">"password"</span>);</span><br><span class="line">    <span class="comment">//打印结果：1---zhangsan---110</span></span><br><span class="line">    System.out.println(id + <span class="string">"---"</span> + username + <span class="string">"---"</span> + password);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>练习</p>
+<p> 定义一个方法，查询emp员工表的数据，将其封装为对象，然后装载集合，返回。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">**</span><br><span class="line"> * <span class="meta">@author</span> 封装Emp表数据的JavaBean</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">emp</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String ename;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> job_id;</span><br><span class="line">    <span class="keyword">private</span> Date joindate;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getEname</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ename;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setEname</span><span class="params">(String ename)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.ename = ename;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getJob_id</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> job_id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setJob_id</span><span class="params">(<span class="keyword">int</span> job_id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.job_id = job_id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Date <span class="title">getJoindate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> joindate;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setJoindate</span><span class="params">(Date joindate)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.joindate = joindate;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"emp&#123;"</span> +</span><br><span class="line">                <span class="string">"id="</span> + id +</span><br><span class="line">                <span class="string">", ename='"</span> + ename + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", job_id="</span> + job_id +</span><br><span class="line">                <span class="string">", joindate="</span> + joindate +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 定义一个方法，查询emp员工表的数据，将其封装为对象，然后装载集合，返回。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo9</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		List&lt;Emp&gt; list = <span class="keyword">new</span> jdbcDemo9().findAll();</span><br><span class="line">		<span class="comment">//打印List，</span></span><br><span class="line">		<span class="comment">//[emp&#123;id=1, ename='zhangsan', job_id=10, joindate=2015-02-01&#125;,</span></span><br><span class="line">		<span class="comment">//emp&#123;id=2, ename='lisi', job_id=11, joindate=2015-02-10&#125;]</span></span><br><span class="line">		System.out.println(list);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> List&lt;Emp&gt; <span class="title">findAll</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement stmt = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		List&lt;Emp&gt; list= <span class="keyword">null</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//1.注册驱动</span></span><br><span class="line">			<span class="comment">//2.获取Connection对象</span></span><br><span class="line">			conn=JDBCUtils.getConnection();</span><br><span class="line">			<span class="comment">//3.定义sql,将login表中id=3记录删除</span></span><br><span class="line">			String sql = <span class="string">"select * from emp"</span>;</span><br><span class="line">			<span class="comment">//4.获取执行SQL的对象 Statement</span></span><br><span class="line">			stmt = conn.createStatement();</span><br><span class="line">			<span class="comment">//5.执行sql，返回影响的行数</span></span><br><span class="line">			rs = stmt.executeQuery(sql);</span><br><span class="line">			<span class="comment">//6.遍历结果集，封装对象，装载集合</span></span><br><span class="line">			Emp emp=<span class="keyword">null</span>;</span><br><span class="line">			list=<span class="keyword">new</span> ArrayList&lt;Emp&gt;();</span><br><span class="line">			<span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">				<span class="comment">//6.1获取数据</span></span><br><span class="line">				<span class="keyword">int</span> id = rs.getInt(<span class="string">"id"</span>);</span><br><span class="line">				String ename = rs.getString(<span class="string">"ename"</span>);</span><br><span class="line">				<span class="keyword">int</span> job_id = rs.getInt(<span class="string">"job_id"</span>);</span><br><span class="line">				Date joindate = rs.getDate(<span class="string">"joindate"</span>);</span><br><span class="line">				<span class="comment">//创建emp对象,并赋值</span></span><br><span class="line">				emp =<span class="keyword">new</span> Emp();</span><br><span class="line">				emp.setId(id);</span><br><span class="line">				emp.setEname(ename);</span><br><span class="line">				emp.setJob_id(job_id);</span><br><span class="line">				emp.setJoindate(joindate);</span><br><span class="line">		</span><br><span class="line">				list.add(emp);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">		JDBCUtils.close(rs,stmt,conn);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -695,19 +707,7 @@
 </ol>
 </li>
 </ul>
-<pre><code>2. 遍历（游标向下一行---&gt;判断是否有数据---&gt;获取数据）
-
-   <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//6.处理结果</span></span><br><span class="line"><span class="comment">//循环判断游标是否是最后一行末尾</span></span><br><span class="line"><span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">    <span class="comment">//6.1获取数据</span></span><br><span class="line">    <span class="keyword">int</span> id = rs.getInt(<span class="number">1</span>);</span><br><span class="line">    String username = rs.getString(<span class="string">"username"</span>);</span><br><span class="line">    String password = rs.getString(<span class="string">"password"</span>);</span><br><span class="line">    <span class="comment">//打印结果：1---zhangsan---110</span></span><br><span class="line">    System.out.println(id + <span class="string">"---"</span> + username + <span class="string">"---"</span> + password);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-3. 练习
-
-    定义一个方法，查询emp员工表的数据，将其封装为对象，然后装载集合，返回。
-
-   <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">**</span><br><span class="line"> * <span class="meta">@author</span> 封装Emp表数据的JavaBean</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">emp</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String ename;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> job_id;</span><br><span class="line">    <span class="keyword">private</span> Date joindate;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getEname</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ename;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setEname</span><span class="params">(String ename)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.ename = ename;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getJob_id</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> job_id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setJob_id</span><span class="params">(<span class="keyword">int</span> job_id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.job_id = job_id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Date <span class="title">getJoindate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> joindate;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setJoindate</span><span class="params">(Date joindate)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.joindate = joindate;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"emp&#123;"</span> +</span><br><span class="line">                <span class="string">"id="</span> + id +</span><br><span class="line">                <span class="string">", ename='"</span> + ename + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", job_id="</span> + job_id +</span><br><span class="line">                <span class="string">", joindate="</span> + joindate +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-   <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 定义一个方法，查询emp员工表的数据，将其封装为对象，然后装载集合，返回。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo9</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		List&lt;Emp&gt; list = <span class="keyword">new</span> jdbcDemo9().findAll();</span><br><span class="line">		<span class="comment">//打印List，</span></span><br><span class="line">		<span class="comment">//[emp&#123;id=1, ename='zhangsan', job_id=10, joindate=2015-02-01&#125;,</span></span><br><span class="line">		<span class="comment">//emp&#123;id=2, ename='lisi', job_id=11, joindate=2015-02-10&#125;]</span></span><br><span class="line">		System.out.println(list);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> List&lt;Emp&gt; <span class="title">findAll</span><span class="params">()</span></span>&#123;</span><br><span class="line">			</span><br><span class="line">			Connection conn = <span class="keyword">null</span>;</span><br><span class="line">			Statement stmt = <span class="keyword">null</span>;</span><br><span class="line">			ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">			List&lt;Emp&gt; list= <span class="keyword">null</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">					<span class="comment">//1.注册驱动</span></span><br><span class="line">					<span class="comment">//2.获取Connection对象</span></span><br><span class="line">					conn=JDBCUtils.getConnection();</span><br><span class="line">					<span class="comment">//3.定义sql,将login表中id=3记录删除</span></span><br><span class="line">					String sql = <span class="string">"select * from emp"</span>;</span><br><span class="line">					<span class="comment">//4.获取执行SQL的对象 Statement</span></span><br><span class="line">					stmt = conn.createStatement();</span><br><span class="line">					<span class="comment">//5.执行sql，返回影响的行数</span></span><br><span class="line">					rs = stmt.executeQuery(sql);</span><br><span class="line">					<span class="comment">//6.遍历结果集，封装对象，装载集合</span></span><br><span class="line">					Emp emp=<span class="keyword">null</span>;</span><br><span class="line">					list=<span class="keyword">new</span> ArrayList&lt;Emp&gt;();</span><br><span class="line">					<span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">							<span class="comment">//6.1获取数据</span></span><br><span class="line">							<span class="keyword">int</span> id = rs.getInt(<span class="string">"id"</span>);</span><br><span class="line">							String ename = rs.getString(<span class="string">"ename"</span>);</span><br><span class="line">							<span class="keyword">int</span> job_id = rs.getInt(<span class="string">"job_id"</span>);</span><br><span class="line">							Date joindate = rs.getDate(<span class="string">"joindate"</span>);</span><br><span class="line">							<span class="comment">//创建emp对象,并赋值</span></span><br><span class="line">							emp =<span class="keyword">new</span> Emp();</span><br><span class="line">							emp.setId(id);</span><br><span class="line">							emp.setEname(ename);</span><br><span class="line">							emp.setJob_id(job_id);</span><br><span class="line">							emp.setJoindate(joindate);</span><br><span class="line">			</span><br><span class="line">							list.add(emp);</span><br><span class="line">					&#125;</span><br><span class="line">			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">			JDBCUtils.close(rs,stmt,conn);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> list;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><h3 id="PreparedStatement：执行SQL的对象（比Statement功能强大）"><a href="#PreparedStatement：执行SQL的对象（比Statement功能强大）" class="headerlink" title="PreparedStatement：执行SQL的对象（比Statement功能强大）"></a>PreparedStatement：执行SQL的对象（比Statement功能强大）</h3><ol>
+<h3 id="PreparedStatement：执行SQL的对象（比Statement功能强大）"><a href="#PreparedStatement：执行SQL的对象（比Statement功能强大）" class="headerlink" title="PreparedStatement：执行SQL的对象（比Statement功能强大）"></a>PreparedStatement：执行SQL的对象（比Statement功能强大）</h3><ol>
 <li><p>SQL注入问题：在拼接SQL时，有一些特殊关键字参与字符串的拼接。造成安全问题。</p>
 <ol>
 <li>输入用户名随意，密码输入：a’ or ‘a’  = ‘a</li>
@@ -764,6 +764,168 @@
 <li>登录实例（不安全SQL拼接）</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.键盘录入，接受用户名和密码</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">"请输入用户名："</span>);</span><br><span class="line">        String username = sc.nextLine();</span><br><span class="line">        System.out.println(<span class="string">"请输入密码："</span>);</span><br><span class="line">        String password = sc.nextLine();</span><br><span class="line">        <span class="comment">//2.调用方法</span></span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">new</span> jdbcDemo10().login(username, password);</span><br><span class="line">        <span class="comment">//3.判断结果，输出不同语句</span></span><br><span class="line">        <span class="keyword">if</span>(flag)&#123;</span><br><span class="line">            <span class="comment">//登录成功</span></span><br><span class="line">            System.out.println(<span class="string">"登录成功！"</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"用户名或密码错误！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 登录方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">login</span><span class="params">(String username,String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (username == <span class="keyword">null</span> || password == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Connection conn = <span class="keyword">null</span>;</span><br><span class="line">        Statement stmt = <span class="keyword">null</span>;</span><br><span class="line">        ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            conn = JDBCUtils.getConnection();</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//sql拼接会产生SQL注入问题，比如密码输入 a' or 'a'  = 'a</span></span><br><span class="line">            String sql = <span class="string">"select * from user where username = '"</span> + username + <span class="string">"' and password = '"</span> + password +<span class="string">"'"</span>;</span><br><span class="line">            stmt = conn.createStatement();</span><br><span class="line">            rs = stmt.executeQuery(sql);</span><br><span class="line">            <span class="keyword">return</span> rs.next();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            JDBCUtils.close(rs, stmt, conn);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//——————————————————</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">login2</span><span class="params">(String username,String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (username == <span class="keyword">null</span> || password == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Connection conn = <span class="keyword">null</span>;</span><br><span class="line">        Statement stmt = <span class="keyword">null</span>;</span><br><span class="line">        ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            conn = JDBCUtils.getConnection();</span><br><span class="line">            String sql = <span class="string">"select * from user where username = ? and password = ?;</span></span><br><span class="line"><span class="string">            pstmt = conn.prepareStatement(sql);</span></span><br><span class="line"><span class="string">            pstmt.setString(1,username);</span></span><br><span class="line"><span class="string">            pstmt.setString(2,password);</span></span><br><span class="line"><span class="string">            rs = pstmt.executeQuery();</span></span><br><span class="line"><span class="string">            return rs.next();</span></span><br><span class="line"><span class="string">        &#125; catch (SQLException e) &#123;</span></span><br><span class="line"><span class="string">            e.printStackTrace();</span></span><br><span class="line"><span class="string">        &#125; finally &#123;</span></span><br><span class="line"><span class="string">            JDBCUtils.close(rs, pstmt, conn);</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        return false;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JDBC基础（二）</title>
+    <url>/2020/05/11/JDBC%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="JDBC（Java-DataBase-Connectivity）"><a href="#JDBC（Java-DataBase-Connectivity）" class="headerlink" title="JDBC（Java DataBase Connectivity）"></a>JDBC（Java DataBase Connectivity）</h1><p>接上一篇，总结剩余的数据库连接技术知识。</p>
+<a id="more"></a>
+
+<h2 id="JDBC控制事务"><a href="#JDBC控制事务" class="headerlink" title="JDBC控制事务"></a>JDBC控制事务</h2><ol>
+<li>事务：一个包含多个步骤的业务操作。如果这个业务操作被事务管理，则这多个步骤要么同时成功，要么同时失败。</li>
+<li>操作：<ol>
+<li>开启事务</li>
+<li>提交事务</li>
+<li>回滚事务</li>
+</ol>
+</li>
+<li>使用Connection对象来管理事务<ol>
+<li>开启事务：setAutoCommit（boolean autoCommit）：调用该方法设置参数为false，即开启事务<ul>
+<li>在执行SQL之前开启事务</li>
+</ul>
+</li>
+<li>提交事务：commit（）<ul>
+<li>当所有SQL执行完后提交事务</li>
+</ul>
+</li>
+<li>回滚事务：rollback（）<ul>
+<li>在catch中回滚事务</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h2><ol>
+<li><p>概念：一个用来存放数据库连接的容器（集合）。当系统初始化后，容器被创建，在容器中会申请一些连接对象，当用户来访问数据库时，从容器中获取连接对象，用户访问完毕后，会将连接对象归还给容器。</p>
+</li>
+<li><p>特点：节约资源，提高用户访问效率</p>
+</li>
+<li><p>实现：</p>
+<ol>
+<li>标准接口：DataSource<ol>
+<li>方法：getConnect()</li>
+<li>归还连接：在连接池中获取连接对象Connection，则使用Connection.close()方法归还连接（不会关闭）</li>
+</ol>
+</li>
+<li>第三方厂商提供：<ol>
+<li>C3P0</li>
+<li>Druid</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Druid：数据连接池的使用</p>
+<ol>
+<li><p>步骤：</p>
+<ol>
+<li>导入jar包</li>
+<li>定义配置文件（.properties，名称任意，可放于任意目录下。需手动添加）</li>
+<li>加载配置文件，Properties</li>
+<li>获取数据库连接池对象：通过工厂来获取 DruidDataSourceFactory</li>
+<li>获取连接：getConnection</li>
+</ol>
+</li>
+<li><p>简单演示</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">   <span class="comment">/**druid 演示</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@author</span></span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">druidDemo1</span> </span>&#123;</span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">           <span class="comment">//1.导入jar包</span></span><br><span class="line">           <span class="comment">//2.定义配置文件</span></span><br><span class="line">           <span class="comment">//3.加载配置文件</span></span><br><span class="line">           Properties pro = <span class="keyword">new</span> Properties();</span><br><span class="line">           InputStream is = druidDemo1.class.getClassLoader().getResourceAsStream("druid.properties");</span><br><span class="line">           pro.load(is);</span><br><span class="line">           <span class="comment">//4.获取连接池对象</span></span><br><span class="line">           DataSource ds = DruidDataSourceFactory.createDataSource((Map) pro);</span><br><span class="line">           <span class="comment">//5.获取连接</span></span><br><span class="line">           Connection conn = ds.getConnection();</span><br><span class="line">           System.out.println(conn);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义工具类</p>
+<ol>
+<li><p>定义一个类 JDBCUtils</p>
+</li>
+<li><p>提供静态代码块加载配置文件，初始化连接池对象</p>
+</li>
+<li><p>提供方法</p>
+<ol>
+<li>获取连接方法：通过数据库连接池获取连接</li>
+<li>释放资源</li>
+<li>获取连接池的方法</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**创建Druid连接池的工具类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lhy</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JDBCUtils</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//1.定义成员变量 DataSource</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> DataSource ds;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//1.加载配置文件</span></span><br><span class="line">            Properties pro = <span class="keyword">new</span> Properties();</span><br><span class="line">            pro.load(JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties"));</span><br><span class="line">            <span class="comment">//2.获取DataSource</span></span><br><span class="line">            ds = DruidDataSourceFactory.createDataSource(pro);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取连接</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ds.getConnection();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 释放资源</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(Statement stmt,Connection conn)</span></span>&#123;</span><br><span class="line">        close(<span class="keyword">null</span>,stmt,conn);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(ResultSet rs,Statement stmt, Connection conn)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (rs != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                rs.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (stmt != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                stmt.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (conn != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                conn.close();<span class="comment">//归还连接</span></span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取连接池方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> DataSource <span class="title">getDataSource</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ds;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**工具类使用</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lhy</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">druidDemo2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 完成添加操作，为test数据库中emp表添加一条记录</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        Connection conn=<span class="keyword">null</span>;</span><br><span class="line">        PreparedStatement pstmt =<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//1.获取连接</span></span><br><span class="line">            conn = JDBCUtils.getConnection();</span><br><span class="line">            <span class="comment">//2.定义sql</span></span><br><span class="line">            String sql=<span class="string">"insert into account values ( null , ?, ? )"</span>;</span><br><span class="line">            <span class="comment">//3.获取preparedStatement对象</span></span><br><span class="line">            pstmt = conn.prepareStatement(sql);</span><br><span class="line">            <span class="comment">//4.给？赋值</span></span><br><span class="line">            pstmt.setString(<span class="number">1</span>,<span class="string">"zhangsan"</span>);</span><br><span class="line">            pstmt.setString(<span class="number">2</span>,<span class="string">"25"</span>);</span><br><span class="line">            <span class="comment">//pstmt.setString(3,"12");</span></span><br><span class="line">            <span class="comment">//5.执行sql</span></span><br><span class="line">            <span class="keyword">int</span> count = pstmt.executeUpdate();</span><br><span class="line">            System.out.println(count);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">//6.释放资源</span></span><br><span class="line">            JDBCUtils.close(pstmt,conn);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="Spring-JDBC：JDBC-Template"><a href="#Spring-JDBC：JDBC-Template" class="headerlink" title="Spring JDBC：JDBC Template"></a>Spring JDBC：JDBC Template</h2><ol>
+<li><p>概念：spring框架对JDBC的简单封装。提供一个JDBCTemplate对象简化JDBC的开发。</p>
+</li>
+<li><p>步骤：</p>
+<ol>
+<li><p>导入jar包</p>
+</li>
+<li><p>创建JdbcTemplate对象（依赖于数据源DataSource）</p>
+<ul>
+<li>JdbcTemplate template = new JdbcTemplate(ds);</li>
+</ul>
+</li>
+<li><p>调用JdbcTemplate的方法来完成CURD操作</p>
+<ul>
+<li>update()：执行DML语句。增删改语句</li>
+<li>queryForMap()：查询结果将结集封装为map集合，列名为key，值为value。<ul>
+<li>注意：查询结果集长度还能是1，即查询一条记录</li>
+</ul>
+</li>
+<li>queryForList()：查询结果集，将结果集封装为list集合<ul>
+<li>注意：将每一条记录封装为一个Map集合，再将Map集合装载到List集合中</li>
+</ul>
+</li>
+<li>query()：查询结果，将结果集封装为JavaBean对象<ul>
+<li>参数一般为RowMapper，使用eanPropertyRowMapper实现类，完成数据到JavaBean的自动封装。new BeanPropertyRowMapper&lt;类型&gt;(类型.class)</li>
+</ul>
+</li>
+<li>queryForObject：查询结果，将结果封装为对象<ul>
+<li>一般用于聚合函数的查询</li>
+</ul>
+</li>
+</ul>
+<p>简单示例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * JdbcTemplate入门</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcTemplateDemo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.导入jar包</span></span><br><span class="line">        <span class="comment">//2.创建JDBCTemplate对象</span></span><br><span class="line">        JdbcTemplate template = <span class="keyword">new</span> JdbcTemplate(JDBCUtils.getDataSource());</span><br><span class="line">        <span class="comment">//3.调用方法</span></span><br><span class="line">        String sql= <span class="string">"update account set age = 21 where id =?"</span>;</span><br><span class="line">        <span class="keyword">int</span> count = template.update(sql, <span class="number">1</span>);</span><br><span class="line">        System.out.println(count);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>练习：</p>
+<ol>
+<li><p>需求：</p>
+<ul>
+<li><p>修改1号数据的job_id为120</p>
+</li>
+<li><p>添加一条记录</p>
+</li>
+<li><p>删除刚才添加的记录</p>
+</li>
+<li><p>查询所有id为1的记录，将其封装为Map集合</p>
+</li>
+<li><p>查询所有记录，将其封装为List</p>
+</li>
+<li><p>查询所有记录，将其封装为Emp对象的List集合</p>
+</li>
+<li><p>查询总记录数</p>
+</li>
+<li><p>表单如图所示，包含id，ename，job_id，joindate</p>
+<img src="/2020/05/11/JDBC%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/emp.png" class="">
+</li>
+</ul>
+</li>
+<li><p>实现代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcTemplateDemo2</span> </span>&#123;</span><br><span class="line">    <span class="comment">//1.获取JDBCTemplate对象</span></span><br><span class="line">    <span class="keyword">private</span> JdbcTemplate template = <span class="keyword">new</span> JdbcTemplate(JDBCUtils.getDataSource());</span><br><span class="line">    <span class="comment">//修改1号数据的job_id为120</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//2.定义SQL语句</span></span><br><span class="line">        String sql = <span class="string">"update emp set job_id = 100 where id = 1"</span>;</span><br><span class="line">        <span class="comment">//3.执行SQL</span></span><br><span class="line">        <span class="keyword">int</span> count = template.update(sql);</span><br><span class="line">        <span class="comment">//打印看执行是否成功</span></span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//添加一条记录</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String sql = <span class="string">"insert into emp(id,ename,job_id) values (?,?,?)"</span>;</span><br><span class="line">        <span class="keyword">int</span> count = template.update(sql, <span class="number">3</span>, <span class="string">"wangmazi"</span>, <span class="number">101</span>);</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//删除刚才添加的记录</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String sql = <span class="string">"delete from emp where id=?"</span>;</span><br><span class="line">        <span class="keyword">int</span> count = template.update(sql, <span class="number">3</span>);</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//查询所有id为1的记录，将其封装为Map集合</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test4</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String sql = <span class="string">"select * from emp where id = ?"</span>;</span><br><span class="line">        Map&lt;String,Object&gt; map = template.queryForMap(sql, <span class="number">1</span>);</span><br><span class="line">        System.out.println(map);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//查询所有记录，将其封装为List</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test5</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String sql = <span class="string">"select * from emp"</span>;</span><br><span class="line">        List&lt;Map&lt;String, Object&gt;&gt; list = template.queryForList(sql);</span><br><span class="line">        System.out.println(list);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//查询所有记录，将其封装为Emp对象的List集合</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test6</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String sql = <span class="string">"select * from emp "</span>;</span><br><span class="line">        List&lt;Emp&gt; list = template.query(sql, <span class="keyword">new</span> BeanPropertyRowMapper&lt;Emp&gt;(Emp<span class="class">.<span class="keyword">class</span>))</span>;</span><br><span class="line">        <span class="keyword">for</span> (Emp emp:list) &#123;</span><br><span class="line">            System.out.println(emp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//查询总记录数</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test7</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String sql = <span class="string">"select count(id) from emp"</span>;</span><br><span class="line">        Long count = template.queryForObject(sql, <span class="keyword">long</span><span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ol>
+</li>
+</ol>
+]]></content>
       <tags>
         <tag>MySQL</tag>
       </tags>
