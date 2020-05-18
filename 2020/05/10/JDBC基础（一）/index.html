@@ -92,13 +92,13 @@
 <meta property="og:url" content="https://lzzy65.github.io.git/2020/05/10/JDBC%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="LzzyZone">
 <meta property="og:description" content="JDBC（Java DataBase Connectivity）概念Java数据库连接，定义了Java语言操作所有关系型数据库的规则，即接口。">
-<meta property="og:image" content="https://lzzy65.github.io.git/2020/05/10/JDBC%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/%E7%A8%8B%E5%BA%8F%E5%91%98.png">
+<meta property="og:image" content="https://wx2.sbimg.cn/2020/05/18/ca8cb9de5d91267520e81f1f3cfb81dd.png">
 <meta property="article:published_time" content="2020-05-10T12:10:30.000Z">
-<meta property="article:modified_time" content="2020-05-13T14:28:26.781Z">
+<meta property="article:modified_time" content="2020-05-18T08:42:27.183Z">
 <meta property="article:author" content="Lzzy">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lzzy65.github.io.git/2020/05/10/JDBC%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/%E7%A8%8B%E5%BA%8F%E5%91%98.png">
+<meta name="twitter:image" content="https://wx2.sbimg.cn/2020/05/18/ca8cb9de5d91267520e81f1f3cfb81dd.png">
 
 
 
@@ -301,6 +301,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -311,6 +333,37 @@
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
           
 
           
@@ -331,10 +384,7 @@
         <h1 id="JDBC（Java-DataBase-Connectivity）"><a href="#JDBC（Java-DataBase-Connectivity）" class="headerlink" title="JDBC（Java DataBase Connectivity）"></a>JDBC（Java DataBase Connectivity）</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Java数据库连接，定义了Java语言操作所有关系型数据库的规则，即接口。</p>
 <a id="more"></a>
 
-
-
-<img src="/2020/05/10/JDBC%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/%E7%A8%8B%E5%BA%8F%E5%91%98.png" class="">
-
+<p><img src="https://wx2.sbimg.cn/2020/05/18/ca8cb9de5d91267520e81f1f3cfb81dd.png" alt="ca8cb9de5d91267520e81f1f3cfb81dd.png"></p>
 <h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jdbcDemo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		<span class="comment">//1. 导入驱动jar包</span></span><br><span class="line">		<span class="comment">//2. 注册驱动</span></span><br><span class="line">        Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">		<span class="comment">//3. 获取数据库连接对象Connec</span></span><br><span class="line">        Connection conn = DriverManager.getConnection(</span><br><span class="line">                <span class="string">"jdbc:mysql://localhost:3306/test"</span>, <span class="string">"root"</span>, <span class="string">"root"</span>);</span><br><span class="line">		<span class="comment">//4. 定义SQL</span></span><br><span class="line">        String sql = <span class="string">"update login set password = 110 where id =1"</span>;</span><br><span class="line">		<span class="comment">//5. 获取执行SQL语句的对象Statement</span></span><br><span class="line">        Statement stmt = conn.createStatement();</span><br><span class="line">		<span class="comment">//6. 执行SQL，接收返回结果</span></span><br><span class="line">        <span class="keyword">int</span> count = stmt.executeUpdate(sql);</span><br><span class="line">		<span class="comment">//7. 处理结果</span></span><br><span class="line">        System.out.println(count);</span><br><span class="line">		<span class="comment">// 8. 释放资源</span></span><br><span class="line">        stmt.close();</span><br><span class="line">        conn.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -621,12 +671,21 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -634,7 +693,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
